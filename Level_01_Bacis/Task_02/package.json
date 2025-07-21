@@ -1,0 +1,14 @@
+{
+  "name": "task_02",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "build": "echo \"Build script runs...\" && exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  }
+}

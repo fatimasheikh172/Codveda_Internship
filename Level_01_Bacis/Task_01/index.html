@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyBrand</div>
+            <div class="burger" id="burger">&#9776;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+      <!--Hero Section-->
+
+    <section id="hero" class="hero animate fade-in">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome to MyBrand</h1>
+                <p>Build modern, fast, and beautiful web experience</p>
+                <a href="#features" class="button">Explore Features</a>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.jpg" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+
+     <!--Features Section-->
+
+     <section id="features" class="features">
+        <div class="features-card animate flip">
+            <h3>⚡ Fast Performance</h3>
+            <p>Optimized for speed and reponsiveness across all devices.</p>
+        </div>
+        <div class="features-card animate flip">
+            <h3>🎨 Stunning UI</h3>
+            <p>Built using modern UI/UX design trends with Flexbox & Grid.</p>
+        </div>
+        <div class="features-card animate flip">
+            <h3>🔒 Secure & Reliable</h3>
+            <p>Follows best practices for SEO, accessibility, and safety.</p>
+        </div>
+     </section>
+
+     <!--Features Section-->
+
+     <section id="contact" class="contact">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+     </section>
+
+     <!--Footer section-->
+     <footer id="footer" class="footer">
+        <p>@ 2025 MyBrand. All rights reserved</p>
+     </footer>
+
+     <script src="script.js"></script>
+</body>
+</html>

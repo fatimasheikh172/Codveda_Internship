@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Form</title>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="form-container" data-aos="flip-up">
+    <h2>User Registration</h2>
+    <form id="animatedForm" novalidate>
+      <div class="form-group" data-aos="fade-right">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required />
+        <div class="error" id="nameError">Name is required.</div>
+      </div>
+
+      <div class="form-group" data-aos="fade-left">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <div class="error" id="emailError">Enter a valid email.</div>
+      </div>
+
+      <div class="form-group" data-aos="fade-right">
+        <label for="phone">Phone Number: </label>
+        <input type="number" id="phone" required />
+        <div class="error" id="phoneError">Enter a number.</div>
+      </div>
+
+      <div class="form-group" data-aos="fade-left">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+        <span class="toggle-password" onclick="togglePassword()">Show</span>
+        <div class="error" id="passwordError">Password must be at least 6 characters.</div>
+      </div>
+
+      <button type="submit" data-aos="zoom-in">Register</button>
+      <div class="success" id="successMessage"></div>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
