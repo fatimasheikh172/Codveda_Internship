@@ -150,10 +150,10 @@ body{
 .features{
   background: rgb(0, 0, 0);
   display: grid;
-  gap: 8rem;
+  gap: 4rem;
   justify-content:center;
   padding: 40px 20px;
-  grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+  grid-template-columns: repeat(auto-fit , minmax(250px , 2fr));
 }
 
 .features-card {
@@ -167,7 +167,6 @@ body{
 
 .features-card h3{
 font-weight: 700;
-gap: 1px;
 }
 
 .features-card p{
@@ -296,6 +295,7 @@ button:hover {
     flex-direction: column;
     gap: 2rem;
     padding: 40px 20px;
+    flex: auto;
   }
 
   .features-card {

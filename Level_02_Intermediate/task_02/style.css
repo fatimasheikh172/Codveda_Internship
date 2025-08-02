@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #eef;
+  transition: background-color 0.3s;
+}
+
+.dark {
+  background-color: #222;
+  color: white;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.controls input, button {
+  margin: 5px;
+  padding: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+}
+
+#forecast {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  width: 100px;
+  border-radius: 8px;
+}
