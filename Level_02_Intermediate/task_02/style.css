@@ -1,47 +1,71 @@
-body {
-  font-family: sans-serif;
+body{
   margin: 0;
-  padding: 2rem;
-  background-color: #eef;
-  transition: background-color 0.3s;
-}
-
-.dark {
-  background-color: #222;
-  color: white;
-}
-
-.app {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
-.controls input, button {
-  margin: 5px;
-  padding: 0.5rem;
-}
-
-.hidden {
-  display: none;
-}
-
-.error {
-  color: red;
-  margin: 10px 0;
-}
-
-#forecast {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background :url(assets/image.jpg );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
 }
 
-.forecast-day {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 5px;
-  width: 100px;
-  border-radius: 8px;
+.container {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.233);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(82, 82, 82, 0.5);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+input , button{
+  padding: 0.4rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 0.5rem 0.5rem;
+}
+
+button {
+ background-color: #4285f4;
+ color: rgb(0, 0, 0);
+ transition: background-color 0.3s;
+ font-weight: bold;
+}
+
+button:hover {
+  background-color: #3367d6;
+  transform: scale(1.02);
+}
+
+  /* Responsive Layout for Mobile Screens */
+@media (min-width: 480px) {
+  .container {  
+    padding: 1rem;
+    width: 90%;
+  }
+  input , button{
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 500px;
+  }
 }
