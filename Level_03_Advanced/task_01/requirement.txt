@@ -1,0 +1,6 @@
+asgrief>=3.7.2
+crispy.bootstrap4>=2023.1
+Django-crispy-forms>=2.1
+pillow>=10.2.0
+sqlparse>=0.4.4
+tzdata>=2024.1

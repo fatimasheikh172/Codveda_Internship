@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+
+{% block contnt %}
+
+
+{% for post in featured_post %}
+ {% if forloop.first %}
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark" style="background-image: url({{ post.blog_image.url }});background-blend-mode: overlay;background-size:cover;">
+    <div class="col-md-8 px-0">
+      <h1 class="display-4 font-sans" style="color: rgb(255, 215, 141); font-weight: bold;"><a href="{% url 'blogs' post.slug %}">{{ post.title }}</a></h1>
+      <p class="lead my-3">{{ post.short_description | truncatewords:30 }}</p>
+      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+    </div>
+  </div>
+ {% endif %}
+{% endfor %}
+
+
+  <h3 class="text-dark font-weight-bold" style="letter-spacing:2px;">Featured Post</h3>
+  <div class="row mb-2">
+    {% for post in featured_post%}
+    {% if not forloop.first %}
+    <div class="col-md-6">
+      <div class="card border-0" >
+        <div class="card-body">
+          <h3><a href="{% url 'blogs' post.slug %}">{{ post.title }}</a></h3>
+          <small class="mb-1 text-muted">{{ post.created_at | timesince}} ago | {{ post.author }}</small>
+          <p class="card-text">{{ post.short_description | truncatewords:25 }}</p>
+        </div>
+      </div>
+    </div>
+     {% endif %}
+    {% endfor %}
+  </div>
+
+    <h3 class="text-warning" style="letter-spacing:2px;">Recent Articles</h3>
+
+  <main role="main" class="container p-0">
+    <div class="row">
+      <div class="col-md-8 blog-main">
+        {% for post in post %}
+        <div class="card border-0" >
+        <div class="card-body">
+          <h3><a href="{% url 'blogs' post.slug %}">{{ post.title }}</a></h3>
+          <small class="mb-1 text-muted">{{ post.created_at | timesince}} ago | {{ post.author }}</small>
+          <p class="card-text">{{ post.short_description | truncatewords:25 }}</p>
+        </div>
+      </div>
+  
+      </div>
+      {% endfor %}
+      <!-- /.blog-main -->
+
+    </div><!-- /.row -->
+
+  </main><!-- /.container -->
+
+</div>
+
+{% endblock %}
